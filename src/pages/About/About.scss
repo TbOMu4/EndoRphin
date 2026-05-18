@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;500;600;700&display=swap");
+
+// ─── Tokens ───────────────────────────────────────────────────────
+$primary: #9b7fc7;
+$primary-dark: #6d4fa0;
+$primary-light: #c4a8e8;
+$border: #e4d8f5;
+$text: #3d2b5a;
+$muted: #9a89b0;
+$white: #fff;
+$radius: 20px;
+
+// ─── Section ──────────────────────────────────────────────────────
+.about {
+  position: relative;
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+  color: $text;
+  background: radial-gradient(ellipse 60% 50% at 10% 15%, #f2c8f8 0%, transparent 60%), radial-gradient(ellipse 60% 60% at 90% 85%, #c5b8ef 0%, transparent 60%), #e8d8f5;
+  padding: 60px 20px 80px;
+
+  // ── Blobs ───────────────────────────────────────────────────────
+  &__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    opacity: 0.35;
+
+    &--tl {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #e8b8fc 0%, transparent 70%);
+      top: -120px;
+      left: -100px;
+    }
+    &--br {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, #b8a0e8 0%, transparent 70%);
+      bottom: -100px;
+      right: -80px;
+    }
+  }
+
+  // ── Container ───────────────────────────────────────────────────
+  &__container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  // ── Hero row ────────────────────────────────────────────────────
+  &__hero {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+    align-items: center;
+
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  // ── Photo ───────────────────────────────────────────────────────
+  &__photo-wrap {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  &__photo-glow {
+    position: absolute;
+    inset: -24px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($primary-light, 0.75) 0%, transparent 70%);
+
+    @keyframes glowPulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.09);
+        opacity: 1;
+      }
+    }
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  &__photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba($white, 0.85);
+    box-shadow: 0 8px 40px rgba($primary-dark, 0.25);
+    object-fit: cover;
+    object-position: top;
+  }
+
+  // ── Hero right ──────────────────────────────────────────────────
+  &__hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__name {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    color: $primary-dark;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  &__role {
+    font-size: 0.88rem;
+    color: $muted;
+    font-weight: 500;
+    margin: 0 0 16px;
+    letter-spacing: 0.02em;
+  }
+
+  // ── Info cards ──────────────────────────────────────────────────
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: rgba($white, 0.72);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba($white, 0.9);
+    border-radius: $radius;
+    padding: 18px 16px;
+    box-shadow: 0 4px 20px rgba($primary-dark, 0.08);
+  }
+
+  &__card-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $primary-dark;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    white-space: nowrap;
+
+    @media (max-width: 860px) {
+      justify-content: center;
+    }
+  }
+
+  &__card-line {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, $primary-light);
+
+    &:last-child {
+      background: linear-gradient(90deg, $primary-light, transparent);
+    }
+  }
+
+  &__card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.86rem;
+      color: $text;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+
+  &__card-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  // ── Certificates section ─────────────────────────────────────────
+  &__certs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__certs-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: $primary-dark;
+    margin: 0;
+  }
+
+  &__certs-hint {
+    font-size: 0.8rem;
+    color: $muted;
+    margin: 0 0 20px;
+  }
+
+  &__certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // ← було 4, стало 3
+    gap: 14px;
+    width: 100%;
+
+    @media (max-width: 860px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  // ── Cert card ────────────────────────────────────────────────────
+  &__cert {
+    position: relative;
+    border: 1.5px solid $border;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0 3px 14px rgba($primary-dark, 0.09);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+
+    @keyframes certIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    animation: certIn 0.4s ease both;
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba($primary-dark, 0.2);
+      border-color: $primary-light;
+
+      img {
+        transform: scale(1.04);
+      }
+      .about__cert-overlay {
+        opacity: 1;
+      }
+    }
+
+    &--active {
+      outline: 3px solid $primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &__cert-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba($primary-dark, 0.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    font-size: 1.6rem;
+  }
+
+  // ── Modal ────────────────────────────────────────────────────────
+  &__modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(40, 20, 70, 0.55);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    animation: fadeIn 0.2s ease;
+  }
+
+  &__modal {
+    background: $white;
+    border-radius: $radius;
+    max-width: 560px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba($primary-dark, 0.32);
+    position: relative;
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: scale(0.93) translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+    animation: modalIn 0.25s ease;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba($primary-dark, 0.12);
+    color: $primary-dark;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1;
+
+    &:hover {
+      background: rgba($primary-dark, 0.22);
+    }
+  }
+
+  &__modal-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: linear-gradient(135deg, #ecdcfb 0%, #d8c2f5 100%);
+    padding: 12px;
+  }
+
+  &__modal-desc {
+    padding: 16px 20px 22px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: $text;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+}
+// .about {
+//   margin-top: -50px;
+//   padding-top: 50px;
+//   //   background: linear-gradient(135deg, #ffffff 0%, #f3e5f5 40%, #9c27b0 100%);
+// }
+// .about__description {
+//   display: grid;
+//   grid-template-columns: auto 1fr;
+// }
+// .about__text {
+//   @include adaptiveValue("font-size", 18, 14);
+//   color: #a450b3;
+//   line-height: 1.2;
+// }
+// .about__text span {
+//   @include adaptiveValue("font-size", 20, 16);
+//   font-weight: bold;
+// }
+// .about__img {
+//   max-width: 400px;
+// }
+// .about__img img {
+//   //   max-width: toRem(400);
+//   width: 100%;
+//   aspect-ratio: 1/1;
+//   object-fit: cover;
+// }
+// @media (max-width: 899px) {
+//   .about {
+//     padding-top: 20px;
+//   }
+//   .about__description {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     text-align: center;
+//   }
+//   .about__img {
+//     justify-self: center;
+//     margin-bottom: 10px;
+//   }
+// }

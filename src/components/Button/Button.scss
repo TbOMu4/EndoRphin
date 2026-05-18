@@ -1,0 +1,17 @@
+.button {
+  @include adaptiveValue("padding-bottom", 12, 4);
+  @include adaptiveValue("padding-top", 12, 4);
+  @include adaptiveValue("padding-left", 24, 6);
+  @include adaptiveValue("padding-right", 24, 6);
+
+  border-radius: toRem(8);
+  background-color: #9c27b0;
+  color: white;
+  font-size: toRem(18);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #570e64;
+  }
+}

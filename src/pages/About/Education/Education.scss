@@ -1,0 +1,44 @@
+.education {
+  // .education__title
+  &__title {
+    text-align: center;
+    font-size: toRem(40);
+  }
+  // .education__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: toRem(20);
+    align-items: stretch;
+  }
+  // .education__item
+  &__item {
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: toRem(8);
+    height: 100%;
+  }
+  // .education__description
+  &__description {
+    margin-bottom: toRem(10);
+  }
+  // .education__image
+  &__image {
+    width: 100%;
+    // height: 100%;
+    // // max-width: 360px;
+    aspect-ratio: 1 / 1;
+    // height: 260px;
+    object-fit: contain;
+    // width: 100%;
+
+    margin-bottom: toRem(8);
+    // transition: all 0.3s;
+
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
+  }
+}

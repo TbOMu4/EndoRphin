@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@use "./functions.scss" as *;
+
+@mixin adaptiveValue($property, $startSize, $endSize, $mode: 0, $widthFrom: null, $widthTo: null) {
+  $minWidth: 320;
+  $maxWidth: 1920;
+
+  @if $widthFrom == null {
+    $widthFrom: $maxWidth;
+  }
+  @if $widthTo == null {
+    $widthTo: $minWidth;
+  }
+
+  $diff: $startSize - $endSize;
+  $range: $widthFrom - $widthTo;
+  $vwValue: math.div($diff, $range) * 100;
+
+  @if $mode == 0 {
+    #{$property}: #{$startSize}px;
+
+    @media (max-width: #{$widthFrom}px) and (min-width: #{$widthTo}px) {
+      #{$property}: calc(#{$endSize}px + #{$vwValue}vw);
+    }
+
+    @media (max-width: #{$widthTo}px) {
+      #{$property}: #{$endSize}px;
+    }
+  }
+
+  @if $mode == 1 {
+    @media (max-width: #{$widthFrom}px) and (min-width: #{$widthTo}px) {
+      #{$property}: calc(#{$endSize}px + #{$vwValue}vw);
+    }
+  }
+
+  @if $mode == 2 {
+    #{$property}: #{$startSize}px;
+
+    @media (max-width: #{$widthTo}px) {
+      #{$property}: inherit;
+    }
+  }
+
+  @if $mode == 3 {
+    @media (max-width: #{$widthTo}px) {
+      #{$property}: #{$endSize}px;
+    }
+  }
+}
