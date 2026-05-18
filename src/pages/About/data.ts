@@ -1,5 +1,5 @@
 import foot_massag from "../../assets/about/foot_massage.jpeg";
-import reintegration_of_veterans_as_an_important_aspect_of_rehabilitation from "../../assets/about/Reintegration_of_veterans_as_an_important_aspect_of_rehabilitation.jpeg";
+import reintegration_of_veterans_as_an_important_aspect_of_rehabilitation from "../../assets/about/reintegration_of_veterans_as_an_important_aspect_of_rehabilitation.jpeg";
 import beauty_technologies_equipmen from "../../assets/about/beauty_technologies_equipment.jpeg";
 import military_rehabilitation from "../../assets/about/military_rehabilitation.jpeg";
 import masters_degree from "../../assets/about/master's_degree.jpeg";
