@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Nunito:wght@400;500;600;700&display=swap");
+.services-list .main {
+  height: 100hv;
+}
+
+.services {
+  margin-top: -50px;
+  background: radial-gradient(ellipse 60% 50% at 10% 15%, #f2c8f8 0%, transparent 60%), radial-gradient(ellipse 60% 60% at 90% 85%, #c5b8ef 0%, transparent 60%), #e8d8f5;
+}
+
+.t {
+  padding-top: 50px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  font-weight: 600;
+  color: #6d4fa0;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=ServicesList.css.map */
