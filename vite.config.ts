@@ -8,6 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/EndoRphin/",
   plugins: [react(), tailwindcss()],
+
   css: {
     preprocessorOptions: {
       scss: {
