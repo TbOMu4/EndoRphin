@@ -36,7 +36,7 @@ export default function About() {
                   <ul className="about__card-list">
                     <li>
                       <span className="about__card-icon">💆</span>
-                      <span>Сертифікований spa та реабілітаційний масажист</span>
+                      <span>Фахівець з фізичної реабілітації та сертифікований масажист</span>
                     </li>
                     <li>
                       <span className="about__card-icon">🏆</span>

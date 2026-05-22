@@ -78,9 +78,13 @@ const priceData: Category[] = [
   {
     title: "Пресотерапія",
     services: [
-      { name: "Пресотерапія загальна", duration: "50 хв", price: "400 грн" },
-      { name: "Пресотерапія локальна", duration: "30 хв", price: "300 грн" },
+      { name: "Пресотерапія загальна", duration: "50 хв", price: "500 грн" },
+      { name: "Пресотерапія локальна", duration: "30 хв", price: "400 грн" },
     ],
+  },
+  {
+    title: "Фонофорез",
+    services: [{ name: "Фонофорез", duration: "30хв", price: "400 грн" }],
   },
   {
     title: "Вібраційний масаж",

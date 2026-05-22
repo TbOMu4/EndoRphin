@@ -19,8 +19,8 @@ const contacts = [
       </svg>
     ),
     label: "Телефон",
-    value: "+38 (099) 123 45 67",
-    href: "tel:+380991234567",
+    value: "+380 63 060 6472",
+    href: "tel:+380630606472",
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const contacts = [
       </svg>
     ),
     label: "Instagram",
-    value: "@name_instagram",
+    value: "alena_fedotka",
     href: "https://instagram.com/alena_fedotka",
     deepLink: "instagram://user?username=alena_fedotka",
   },
@@ -40,7 +40,7 @@ const contacts = [
       </svg>
     ),
     label: "TikTok",
-    value: "@name_TikTok",
+    value: "muza31025",
     href: "https://tiktok.com/@muza31025",
     deepLink: "tiktok://user/@muza31025",
   },

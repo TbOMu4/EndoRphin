@@ -5,6 +5,7 @@
 @import "./styles/settings.scss";
 @import "./styles/style.scss";
 body {
+  padding-top: toRem(100);
   // background: rgba(239, 233, 239, 0.5529411765);
   font-family: $fontFamily;
   font-weight: 400;

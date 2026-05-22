@@ -45,7 +45,7 @@ export default function Description() {
             <div className="description__who-will who-will-description ">
               <div>
                 <h3 className="who-will-description__title">Мій підхід</h3>
-                <h4>Я працюю у форматі оздоровчої реабілітації — без діагнозів і «лікувальних» формулювань. Кожна сесія індивідуальна та може включати:</h4>
+                <h4>Я працюю у форматі оздоровчої реабілітації. Кожна сесія індивідуальна та може включати:</h4>
                 <ul className="who-will-description__list">
                   <li className="who-will-description__item">
                     <FaHandHoldingHeart /> М’які мануальні техніки

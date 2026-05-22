@@ -1,4 +1,18 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff; // щоб контент під хедером не просвічував
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); // опціонально
+  // &--hidden {
+  //   transform: translateY(-80%);
+  // }
+
+  // &--visible {
+  //   transform: translateY(0);
+  // }
   // .header__container
   &__container {
     display: grid;
@@ -124,6 +138,7 @@
 
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
     }
   }
 
