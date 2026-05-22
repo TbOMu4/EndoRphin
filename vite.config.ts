@@ -6,7 +6,7 @@ import { dirname } from "path";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/EndoRphin/",
+  base: "/",
   plugins: [react(), tailwindcss()],
 
   css: {
