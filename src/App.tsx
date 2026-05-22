@@ -7,7 +7,7 @@ import { About, Services, Contacts, PriceList, Home } from "./pages/index";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/EndoRphin">
+      <BrowserRouter>
         <Header />
         <MainLayout>
           <Routes>
