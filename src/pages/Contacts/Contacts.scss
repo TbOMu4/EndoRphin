@@ -195,8 +195,8 @@ $radius-sm: 12px;
     font-size: 0.85rem;
     font-weight: 600;
     color: $primary-dark;
-    white-space: nowrap;
-    flex-wrap: wrap;
+    // white-space: nowrap;
+    // flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
@@ -222,6 +222,11 @@ $radius-sm: 12px;
     &__note {
       font-size: 0.78rem;
       padding: 9px 16px;
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
     }
   }
 }

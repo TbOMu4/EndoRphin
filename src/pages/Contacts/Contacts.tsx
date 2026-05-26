@@ -2,16 +2,16 @@ import "./Contacts.scss";
 import Footer from "../../components/Footer/Footer";
 
 const contacts = [
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-      </svg>
-    ),
-    label: "Адреса",
-    value: "м. Городок, вул. Шкільна, 10",
-    // href: "https://maps.google.com/?q=Київ",
-  },
+  // {
+  //   icon: (
+  //     <svg viewBox="0 0 24 24" fill="currentColor">
+  //       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+  //     </svg>
+  //   ),
+  //   label: "Адреса",
+  //   value: "м. Городок, вул. Шкільна, 10",
+  //   // href: "https://maps.google.com/?q=Київ",
+  // },
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
@@ -76,7 +76,7 @@ export default function Contacts() {
 
           <div className="contacts__note">
             <span className="contacts__note-icon">🕐</span>
-            <span>Пн – Сб: 9:00 – 20:00 &nbsp;·&nbsp; Нд: 10:00 – 17:00</span>
+            <span>Пн – Пт: 9:00 – 19:00 &nbsp;·&nbsp; Сб: 09:00 – 15:00 &nbsp;·&nbsp; Нд: вихідний</span>
           </div>
         </div>
       </section>
